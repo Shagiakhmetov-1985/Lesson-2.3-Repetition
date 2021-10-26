@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3104D3A2727F9CF000C3F01 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3104D392727F9CF000C3F01 /* AboutMeViewController.swift */; };
+		C3104D3C272839C8000C3F01 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3104D3B272839C8000C3F01 /* ImageViewController.swift */; };
+		C3A1E23F2726E61A00BFF9D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A1E23E2726E61A00BFF9D6 /* User.swift */; };
 		C3C8829C2725AB8300061B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8829B2725AB8300061B76 /* AppDelegate.swift */; };
 		C3C8829E2725AB8300061B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8829D2725AB8300061B76 /* SceneDelegate.swift */; };
 		C3C882A02725AB8300061B76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8829F2725AB8300061B76 /* LoginViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3104D392727F9CF000C3F01 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		C3104D3B272839C8000C3F01 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		C3A1E23E2726E61A00BFF9D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C3C882982725AB8300061B76 /* Lesson 2.3 Repetition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 2.3 Repetition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C8829B2725AB8300061B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C8829D2725AB8300061B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3A1E2392726E3B100BFF9D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3C8829B2725AB8300061B76 /* AppDelegate.swift */,
+				C3C8829D2725AB8300061B76 /* SceneDelegate.swift */,
+				C3C882A92725AB8400061B76 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3A1E23A2726E47E00BFF9D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3C882A42725AB8400061B76 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3A1E23B2726E4A200BFF9D6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C3C882A12725AB8300061B76 /* Main.storyboard */,
+				C3C882A62725AB8400061B76 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C3A1E23C2726E4BF00BFF9D6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3C8829F2725AB8300061B76 /* LoginViewController.swift */,
+				C3E9236827268C2D00BB3FF8 /* EnterViewController.swift */,
+				C3104D392727F9CF000C3F01 /* AboutMeViewController.swift */,
+				C3104D3B272839C8000C3F01 /* ImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3A1E23D2726E59500BFF9D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3A1E23E2726E61A00BFF9D6 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C3C8828F2725AB8300061B76 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +110,11 @@
 		C3C8829A2725AB8300061B76 /* Lesson 2.3 Repetition */ = {
 			isa = PBXGroup;
 			children = (
-				C3C8829B2725AB8300061B76 /* AppDelegate.swift */,
-				C3C8829D2725AB8300061B76 /* SceneDelegate.swift */,
-				C3C8829F2725AB8300061B76 /* LoginViewController.swift */,
-				C3E9236827268C2D00BB3FF8 /* EnterViewController.swift */,
-				C3C882A12725AB8300061B76 /* Main.storyboard */,
-				C3C882A42725AB8400061B76 /* Assets.xcassets */,
-				C3C882A62725AB8400061B76 /* LaunchScreen.storyboard */,
-				C3C882A92725AB8400061B76 /* Info.plist */,
+				C3A1E23D2726E59500BFF9D6 /* Models */,
+				C3A1E23C2726E4BF00BFF9D6 /* ViewControllers */,
+				C3A1E23B2726E4A200BFF9D6 /* Storyboards */,
+				C3A1E23A2726E47E00BFF9D6 /* Resources */,
+				C3A1E2392726E3B100BFF9D6 /* Supporting Files */,
 			);
 			path = "Lesson 2.3 Repetition";
 			sourceTree = "<group>";
@@ -144,6 +193,9 @@
 				C3C882A02725AB8300061B76 /* LoginViewController.swift in Sources */,
 				C3E9236927268C2D00BB3FF8 /* EnterViewController.swift in Sources */,
 				C3C8829C2725AB8300061B76 /* AppDelegate.swift in Sources */,
+				C3104D3C272839C8000C3F01 /* ImageViewController.swift in Sources */,
+				C3A1E23F2726E61A00BFF9D6 /* User.swift in Sources */,
+				C3104D3A2727F9CF000C3F01 /* AboutMeViewController.swift in Sources */,
 				C3C8829E2725AB8300061B76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S4AD5RA4FS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Lesson 2.3 Repetition/Info.plist";
+				INFOPLIST_FILE = "Lesson 2.3 Repetition/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S4AD5RA4FS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Lesson 2.3 Repetition/Info.plist";
+				INFOPLIST_FILE = "Lesson 2.3 Repetition/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

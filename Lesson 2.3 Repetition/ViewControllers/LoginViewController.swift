@@ -12,16 +12,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private let user = "Marat"
-    private let password = "Password"
+    private let user = User.getUserData()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let enterVC = segue.destination as! EnterViewController
-        enterVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewController = tabBarController.viewControllers else { return }
+
+        viewController.forEach {
+            if let enterVC = $0 as? EnterViewController {
+                enterVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let aboutMeVC = navigationVC.topViewController as! AboutMeViewController
+                aboutMeVC.user = user
+            }
+        }
+        
     }
     
     @IBAction func logInPressed() {
-        if userTextField.text != user || passwordTextField.text != password {
+        if userTextField.text != user.login || passwordTextField.text != user.password {
             showAlert(
                 title: "Invalid login or password!",
                 message: "Please, enter correct login or password",
@@ -29,15 +38,13 @@ class LoginViewController: UIViewController {
             )
             return
         }
-        
-        performSegue(withIdentifier: "enterVC", sender: nil)
     }
     
     @IBAction func forgotUserOrPassword(_ sender: UIButton) {
         if sender.tag == 0 {
-            showAlert(title: "Forgot login?", message: "Your user name is: \(user)")
+            showAlert(title: "Forgot login?", message: "Your user name is: \(user.login)")
         } else {
-            showAlert(title: "Forgot password?", message: "Your password is: \(password)")
+            showAlert(title: "Forgot password?", message: "Your password is: \(user.password)")
         }
     }
     
@@ -69,6 +76,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else {
             logInPressed()
+            performSegue(withIdentifier: "enterVC", sender: nil)
         }
         return true
     }
